@@ -21,6 +21,15 @@
 
 <!-- START GUESTBOOK CONTENT --->
 <div align="left">
+<strong><a href="https://github.com/nikeee/nikeee/issues/2">fionera</a></strong> <small>(Jan 25, 2026)</small> - Homepage: https://fionera.de<br>
+<em>Greetings to my fellow surfers</em><br>
+🏄 🌐<br>
+<sub>Browser: Opera, ICQ: 462923879, Location: Earth</sub>
+</div>
+
+---
+
+<div align="left">
 <strong><a href="https://github.com/nikeee/nikeee/issues/1">twobiers</a></strong> <small>(Jan 25, 2026)</small> - Homepage: https://twobiers.github.io/<br>
 <em>Ich war hier 2026</em><br>
 Coole Seite! 😊<br>Macht weiter so, schaue bestimmt wieder vorbei.<br>Grüße aus dem World Wide Web ✌️<br>
