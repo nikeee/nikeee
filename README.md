@@ -7,8 +7,8 @@
 
 <p align="center">
   Check out my projects below<br>
-  or my <a href="https://holz.nu">homepage</a><br>
-  or my <a href="https://blog.holz.nu">blog</a>
+  or my <a href="https://holz.nu">homepage</a> <img src="./img/hot.gif"><br>
+  or my <a href="https://blog.holz.nu">blog</a> <img src="./img/hot.gif">
 </p>
 
 <p align="center">
