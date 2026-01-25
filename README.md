@@ -20,6 +20,7 @@
 <img width="100%" src="./img/colorbar.gif">
 
 <!-- START GUESTBOOK CONTENT --->
+<p align="center"><em>No guestbook entries yet. Be the first to sign!</em></p>
 <!-- END GUESTBOOK CONTENT --->
 
 <img width="100%" src="./img/colorbar.gif">
