@@ -20,8 +20,12 @@
 <img width="100%" src="./img/colorbar.gif">
 
 <!-- START GUESTBOOK CONTENT --->
-<p align="center"><em>No guestbook entries yet. Be the first to sign!</em></p>
-<!-- END GUESTBOOK CONTENT --->
+<div align="left">
+<strong><a href="https://github.com/nikeee/nikeee/issues/1">twobiers</a></strong> <small>(Jan 25, 2026)</small> - Homepage: https://twobiers.github.io/<br>
+<em>Ich war hier 2026</em><br>
+Coole Seite! 😊<br>Macht weiter so, schaue bestimmt wieder vorbei.<br>Grüße aus dem World Wide Web ✌️<br>
+<sub>Browser: Netscape Navigator, ICQ: 0308086661312, Location: World Wide Web</sub>
+</div><!-- END GUESTBOOK CONTENT --->
 
 <img width="100%" src="./img/colorbar.gif">
 
