@@ -1,6 +1,6 @@
 name: Guestbook Entry
 description: Leave a guestbook entry
-title: "[Guestbook Entry]"
+title: "[Guestbook Entry] (you can leave this as is)"
 labels:
   - guestbook-entry
 assignees: []
