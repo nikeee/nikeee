@@ -1,0 +1,76 @@
+name: Guestbook Entry
+description: Leave a guestbook entry
+title: "[Guestbook Entry]"
+labels:
+  - guestbook-entry
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: Leave a message or just say hi
+
+  - type: input
+    id: name
+    attributes:
+      label: Nick name
+      placeholder: CoolBoy99
+    validations:
+      required: true
+
+  - type: input
+    id: homepage
+    attributes:
+      label: Homepage
+      placeholder: http://www.geocities.com/something
+    validations:
+      required: false
+
+  - type: input
+    id: icq
+    attributes:
+      label: ICQ Number
+    validations:
+      required: false
+
+  - type: input
+    id: location
+    attributes:
+      label: Location
+    validations:
+      required: false
+
+  - type: dropdown
+    id: browser
+    attributes:
+      label: Favorite Browser
+      options:
+        - Internet Explorer 6
+        - Netscape Navigator
+        - Mozilla
+        - Opera
+        - Lynx
+    validations:
+      required: false
+
+  - type: input
+    id: title
+    attributes:
+      label: Title
+      placeholder: Greetings to everyone!!!
+    validations:
+      required: false
+
+  - type: textarea
+    id: message
+    attributes:
+      label: Message
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        **Thanks for signing the guestbook!**
+        Don't forget to read the other entries

@@ -1,0 +1,19 @@
+<svg width="100%" height="50" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .marquee {
+      font-family: 'Comic Sans MS', 'Times New Roman', Verdana, Arial, sans-serif;
+      font-size: 36px;
+      fill: #fff;
+      animation: move 10s linear infinite;
+      stroke: rgb(0, 0, 0, 0.6);
+      stroke-width: 0.5px;
+    }
+    @keyframes move {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+  </style>
+  <text x="0" y="35" class="marquee">
+    Welcome to nikeee's GitHub Profile Page
+  </text>
+</svg>

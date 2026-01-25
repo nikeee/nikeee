@@ -1,0 +1,137 @@
+name: Update Guestbook
+
+on:
+  workflow_dispatch:
+  issues:
+    types: [opened, closed, reopened, deleted, labeled, unlabeled]
+
+permissions:
+  contents: write
+  issues: read
+
+jobs:
+  update-guestbook:
+    runs-on: ubuntu-slim
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const allIssues = await github.paginate(github.rest.issues.listForRepo, {
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              labels: 'guestbook-entry',
+              state: 'open',
+              sort: 'created',
+              direction: 'desc'
+            });
+
+            const issues = allIssues.slice(0, 3);
+            console.log(`Found ${allIssues.length} guestbook entries, showing newest ${issues.length}`);
+
+            const startMarker = '<!-- START GUESTBOOK CONTENT --->';
+            const endMarker = '<!-- END GUESTBOOK CONTENT --->';
+
+            // Sanitize untrusted input to prevent marker injection
+            function sanitize(str) {
+              if (!str) return str;
+              return str
+                .replace(/<!--\s*START\s+GUESTBOOK\s+CONTENT\s*---?>/gi, '')
+                .replace(/<!--\s*END\s+GUESTBOOK\s+CONTENT\s*---?>/gi, '');
+            }
+
+            function parseIssueBody(body) {
+              if (!body) return {};
+
+              const lines = body.split('\n');
+              let currentField = null;
+              let currentValue = [];
+
+              const fields = {};
+              for (const line of lines) {
+                const headerMatch = line.match(/^###\s+(.+)$/);
+                if (headerMatch) {
+                  if (currentField) {
+                    fields[currentField] = sanitize(currentValue.join('\n').trim());
+                  }
+                  currentField = headerMatch[1].trim();
+                  currentValue = [];
+                } else if (currentField) {
+                  if (line.trim() !== '_No response_') {
+                    currentValue.push(line);
+                  }
+                }
+              }
+
+              if (currentField) {
+                fields[currentField] = sanitize(currentValue.join('\n').trim());
+              }
+
+              return fields;
+            }
+
+            let guestbookEntries = [];
+
+            if (issues.length > 0) {
+              for (const issue of issues) {
+                const fields = parseIssueBody(issue.body);
+                const name = fields['Nick name'] ?? 'Anonymous';
+                const homepage = fields['Homepage'] ?? null;
+                const icq = fields['ICQ Number'] ?? null;
+                const location = fields['Location'] ?? null;
+                const browser = fields['Favorite Browser'] === 'None' ? null : (fields['Favorite Browser'] ?? null);
+                const title = fields['Title'] ?? null;
+                const message = fields['Message'] ?? null;
+                const date = new Date(issue.created_at).toLocaleDateString('en-US', {
+                  year: 'numeric',
+                  month: 'short',
+                  day: 'numeric'
+                });
+
+                let entry = '<div align="left">\n';
+                entry += `<strong><a href="${issue.html_url}">${name}</a></strong> <small>(${date})</small>`;
+                if (homepage) {
+                  entry += ` - Homepage: ${homepage}`;
+                }
+                entry += `<br>\n`;
+                if (title) {
+                  entry += `<em>${title}</em><br>\n`;
+                }
+                entry += `${message.replace(/\n/g, '<br>')}<br>\n`;
+
+                let extras = [];
+                if (browser) extras.push(`Browser: ${browser}`);
+                if (icq) extras.push(`ICQ: ${icq}`);
+                if (location) extras.push(`Location: ${location}`);
+                if (extras.length > 0) {
+                  entry += `<sub>${extras.join(', ')}</sub>\n`;
+                }
+                entry += '</div>';
+                guestbookEntries.push(entry);
+              }
+            }
+
+            const guestbookContent = guestbookEntries.length > 0
+              ? guestbookEntries.join('\n\n---\n\n')
+              : '<p align="center"><em>No guestbook entries yet. Be the first to sign!</em></p>\n';
+
+            const readmePath = 'README.md';
+            let readme = fs.readFileSync(readmePath, 'utf8');
+
+            const regex = new RegExp(`${startMarker}[\\s\\S]*?${endMarker}`);
+
+            const newContent = `${startMarker}\n${guestbookContent}${endMarker}`;
+            readme = readme.replace(regex, newContent);
+
+            fs.writeFileSync(readmePath, readme);
+            console.log('README.md updated successfully');
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add README.md
+          git diff --quiet --cached || git commit -m "Update guestbook entries"
+          git push
+
