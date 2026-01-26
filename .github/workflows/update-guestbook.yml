@@ -3,7 +3,7 @@ name: Update Guestbook
 on:
   workflow_dispatch:
   issues:
-    types: [opened, closed, reopened, deleted, labeled, unlabeled]
+    types: [closed, reopened, deleted, labeled, unlabeled]
 
 permissions:
   contents: write
