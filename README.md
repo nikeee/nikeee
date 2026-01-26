@@ -21,6 +21,15 @@
 
 <!-- START GUESTBOOK CONTENT --->
 <div align="left">
+<strong><a href="https://github.com/nikeee/nikeee/issues/3">soerface</a></strong> <small>(Jan 26, 2026)</small> - Homepage: https://soerface.de<br>
+<em>HDGDL</em><br>
+Grüß dich alter! Schicke Homepage hast du, gefällt mir <img src="https://www.greensmilies.com/smile/smiley_emoticons_unknownauthor_respekt.gif"> <img src="https://www.greensmilies.com/smile/smiley_emoticons_rate10.gif"><br><br><img src="https://www.greensmilies.com/smile/smiley_emoticons_seb_wer_programmieren_kann.gif"><br><br>Wollen wir uns morgen nach der Schule treffen? Ich kann bis 18:00 dann muss ich zum Essen zuhause sein.<br><br>Bis dann! <img src="https://www.greensmilies.com/smile/smiley_emoticons_laola.gif"><img src="https://www.greensmilies.com/smile/smiley_emoticons_laola.gif"><br>
+<sub>Browser: Internet Explorer 6, ICQ: 281282194, Location: Home</sub>
+</div>
+
+---
+
+<div align="left">
 <strong><a href="https://github.com/nikeee/nikeee/issues/2">fionera</a></strong> <small>(Jan 25, 2026)</small> - Homepage: https://fionera.de<br>
 <em>Greetings to my fellow surfers</em><br>
 🏄 🌐<br>
