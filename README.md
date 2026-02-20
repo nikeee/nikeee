@@ -21,6 +21,13 @@
 
 <!-- START GUESTBOOK CONTENT --->
 <div align="left">
+<strong><a href="https://github.com/nikeee/nikeee/issues/4">twobiers</a></strong> <small>(Feb 20, 2026)</small><br>
+<img width="195" height="292" alt="Image" src="https://github.com/user-attachments/assets/cfed5c5b-7413-40d3-af48-ad0b212bcf76" /><br>
+</div>
+
+---
+
+<div align="left">
 <strong><a href="https://github.com/nikeee/nikeee/issues/3">soerface</a></strong> <small>(Jan 26, 2026)</small> - Homepage: https://soerface.de<br>
 <em>HDGDL</em><br>
 Grüß dich alter! Schicke Homepage hast du, gefällt mir <img src="https://www.greensmilies.com/smile/smiley_emoticons_unknownauthor_respekt.gif"> <img src="https://www.greensmilies.com/smile/smiley_emoticons_rate10.gif"><br><br><img src="https://www.greensmilies.com/smile/smiley_emoticons_seb_wer_programmieren_kann.gif"><br><br>Wollen wir uns morgen nach der Schule treffen? Ich kann bis 18:00 dann muss ich zum Essen zuhause sein.<br><br>Bis dann! <img src="https://www.greensmilies.com/smile/smiley_emoticons_laola.gif"><img src="https://www.greensmilies.com/smile/smiley_emoticons_laola.gif"><br>
@@ -34,15 +41,6 @@ Grüß dich alter! Schicke Homepage hast du, gefällt mir <img src="https://www.
 <em>Greetings to my fellow surfers</em><br>
 🏄 🌐<br>
 <sub>Browser: Opera, ICQ: 462923879, Location: Earth</sub>
-</div>
-
----
-
-<div align="left">
-<strong><a href="https://github.com/nikeee/nikeee/issues/1">twobiers</a></strong> <small>(Jan 25, 2026)</small> - Homepage: https://twobiers.github.io/<br>
-<em>Ich war hier 2026</em><br>
-Coole Seite! 😊<br>Macht weiter so, schaue bestimmt wieder vorbei.<br>Grüße aus dem World Wide Web ✌️<br>
-<sub>Browser: Netscape Navigator, ICQ: 0308086661312, Location: World Wide Web</sub>
 </div><!-- END GUESTBOOK CONTENT --->
 
 <img width="100%" src="./img/colorbar.gif">
